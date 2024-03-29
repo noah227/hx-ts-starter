@@ -1,0 +1,53 @@
+{
+	"id": "your extension id",
+	"name": "your extension name",
+	"description": "your extension description",
+	"displayName": "your extension display name",
+	"version": "0.0.0",
+	"publisher": "your name",
+	"engines": {
+		"HBuilderX": "^2.7.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"main": "./extension",
+	"scripts": {
+		"build": "rollup -c rollup.config.js"
+	},
+	"activationEvents": [
+		"onCommand:extension.helloWorld"
+	],
+	"contributes": {
+		"commands": [{
+			"command": "extension.helloWorld",
+			"title": "Hello World"
+		}],
+		"menus": {
+			"editor/context": [{
+					"command": "extension.helloWorld",
+					"group": "z_commands",
+					"when": "editorTextFocus"
+				},
+				{
+					"group": "z_commands"
+				}
+			]
+		}
+	},
+	"extensionDependencies": [
+		"plugin-manager"
+	],
+	"dependencies": {},
+	"devDependencies": {
+		"@rollup/plugin-commonjs": "^24.1.0",
+		"@rollup/plugin-node-resolve": "^15.0.2",
+		"@rollup/plugin-terser": "^0.4.3",
+		"@rollup/plugin-typescript": "^11.1.0",
+		"@rollup/plugin-json": "^6.0.0",
+		"@types/node": "^20.3.3",
+		"rollup": "^3.23.0",
+		"tslib": "^2.5.2",
+		"typescript": "^5.0.4"
+	}
+}
