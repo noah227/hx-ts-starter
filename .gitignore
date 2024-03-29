@@ -2,6 +2,8 @@
 node_modules
 dist
 *.zip
+/src/index.js
+/src/types
 
 # local env files
 .env.local
