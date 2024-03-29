@@ -6,9 +6,9 @@ const terser = require("@rollup/plugin-terser")
 
 const plugins = [
     nodeResolve(),
-	typescript(),
+    typescript(),
     commonjs(),
-	pluginJson(),
+    pluginJson(),
     terser()
 ]
 
